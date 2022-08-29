@@ -24,6 +24,9 @@ jobs:
         run: npm run lint:ts
       - name: Run styles lint and format check
         run: npm run lint:css
+      - name: "echo path"
+        run: echo "$PATH"
+
  
   deploy:
     needs: test
@@ -43,4 +46,3 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-          
