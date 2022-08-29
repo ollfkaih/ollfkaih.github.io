@@ -26,6 +26,10 @@ jobs:
         run: npm run lint:css
       - name: "echo path"
         run: echo "$PATH"
+      - name: "set secret"
+        run: echo "$SECRET"
+        env:
+          SECRET: ${{secrets.PASSWORD}}
 
  
   deploy:
